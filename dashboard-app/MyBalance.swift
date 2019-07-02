@@ -8,48 +8,65 @@
 
 import SwiftUI
 
+
+struct CardLabel : View {
+    var cardLabelText : String = "Card Label"
+    var body: some View {
+        HStack {
+            Spacer()
+            Text(self.cardLabelText)
+                .fontWeight(.medium)
+                .font(.system(size : 30))
+            Spacer()
+        }
+    }
+}
+
+
+struct CardValue : View {
+    var cardValueText : String = "$"
+    var body: some View {
+        HStack {
+            Spacer()
+            Text(self.cardValueText)
+                .fontWeight(.bold)
+                .font(.system(size : 40))
+            Spacer()
+        }
+    }
+}
+
+
 struct MyBalance : View {
-    
-    
     
     var mainBackgroudColor : Color = Color(red: 32/255, green: 175/255, blue: 155/255)
     var textColor : Color = .white
+    var cardLabelText : String
+    
+    
     
     var body: some View {
         
-        VStack (alignment: .center, spacing: 50) {
-            // Title Text
-            Text("My Balance")
-                .fontWeight(.medium)
-                .font(.system(size : 30))
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                .padding(.top,20).padding(.bottom,20)
+        VStack {
+            CardLabel(cardLabelText: "My Balance")
+                .padding(.vertical , 20)
             
-            // Value Text
-            
-            
-            Text("$3,000.00")
-                .fontWeight(.thin)
-                .font(.system(size : 40))
-                .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-                .padding(.top,20).padding(.bottom,20)
-            }
-            
-            
-            
-            // Frame Configuration
-            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
-            .background(mainBackgroudColor)
-            .cornerRadius(16, antialiased: true)
-            .foregroundColor(textColor)
-            
+            CardValue(cardValueText: "$3000.00")
+                .padding(.vertical , 20)
+        }
+            .background(brandGreen)
+            .foregroundColor(.white)
+            .cornerRadius(16)
+        
+        
+        
     }
 }
 
 #if DEBUG
 struct MyBalance_Previews : PreviewProvider {
     static var previews: some View {
-        MyBalance()
+        MyBalance(cardLabelText: "My Balance")
     }
 }
 #endif

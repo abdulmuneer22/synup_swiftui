@@ -8,49 +8,64 @@
 
 import SwiftUI
 
-struct ContentView : View {
+struct SomeCard : View{
     var body: some View {
-        
-        ScrollView{
-        
-            VStack {
-                MyBalance()
-                    .padding(.trailing, 0)
-                    .padding(.leading, 10)
-                
-                
-                /******  Income Cards ******/
-                ScrollView {
-                    HStack {
-                        IncomeCard(backgroudColor: coffeeBrown, cardTitle: "Spent", cardValue: "3,000")
-                        
-                        IncomeCard(backgroudColor: coffeeBrown, cardTitle: "Spent", cardValue: "3,000")
-                    }
-                    }.padding(.leading , 10)
-                    .frame(width: 400, height: 200, alignment: .center)
-                /****** END OF  Income Cards ******/
-                
-                
-                /** TXN LIST CARD** */
-                TransactionList()
-                    .padding(.leading , 20)
-                    .padding(.top, 30)
-                    .frame(width: 400)
-                
-                /** END OF TXN LIST CARD** */
-                
-                
-                }.frame(width: 400)
-                // end vertical stack under scrollview
-        }
-            
-        
+        HStack {
+            VStack(alignment: .leading) {
+                Text("Hello SWIFT UI")
+                Text("Hello SWIFT UI")
+                Text("Hello SWIFT UI")
+            }
+            Spacer()
+            }.background(Color.purple)
+            .padding(.horizontal , 20)
+            .relativeWidth(1.0)
         
     }
-    
-    
-    
-    
+}
+
+
+struct HorizontalScroller : View{
+    var body: some View {
+        ScrollView {
+            HStack {
+                IncomeCard(backgroudColor: coffeeBrown, cardTitle: "Income", cardValue: "$5000.00")
+                IncomeCard(backgroudColor: coffeeBrown, cardTitle: "Income", cardValue: "$5000.00")
+            }
+            }.frame( height: 220)
+    }
+}
+
+
+struct TransactionListContainer : View {
+    var body : some View {
+        TransactionList()
+    }
+}
+
+
+struct ContentView : View {
+    var body: some View {
+        GeometryReader { geometry in
+            
+            VStack {
+                ScrollView{
+                    MyBalance(cardLabelText: "My Balance")
+                    .frame(width: geometry.size.width - 20)
+                        .padding(.horizontal , 10)
+                    HorizontalScroller()
+                    .frame(width: geometry.size.width - 20)
+                    .padding(.horizontal , 10)
+                    TransactionListContainer()
+                    .frame(width: geometry.size.width - 20)
+                    .padding(.horizontal , 10)
+                }
+                
+            }
+            
+        }
+        
+    }
     
 }
 

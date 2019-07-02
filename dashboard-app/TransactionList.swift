@@ -23,6 +23,7 @@ struct ListTabItem : View{
                 Rectangle()
                     .foregroundColor(brandGreen)
             ).cornerRadius(16)
+        
     }
 }
 
@@ -33,7 +34,9 @@ struct TransactionListTabItems : View {
             ListTabItem(label: "All")
             ListTabItem(label: "Income")
             ListTabItem(label: "Spent")
-            }.frame(width: 400, height: 50, alignment: .leading)
+            Spacer()
+            }.padding(.horizontal , 10)
+            .padding(.vertical , 5)
     }
 }
 
@@ -44,31 +47,43 @@ struct TxnListRowItem : View {
     var body : some View {
         HStack(alignment: .center, spacing: 0) {
             Image("up")
-            .padding(.leading , 20)
+                .padding(.leading , 20)
+            Spacer()
             VStack(alignment: .leading,spacing: 15){
                 Text("Salary")
                 Text("12 June 2019")
-            }
+                }
                 .frame(alignment: .leading)
                 .padding(.top , 10)
                 .padding(.leading, 20)
             Spacer()
             Text("+$3,000")
-            .padding(.trailing, 10)
+                .padding(.trailing, 10)
             }
-//            .background(Color.red)
+        
         
     }
 }
 
 
 
+struct TransactionListLabel : View {
+    var body: some View {
+        HStack {
+            Label(textLabel: "Transaction List", fontSize: 20)
+            Spacer()
+            }.padding(.horizontal , 15)
+            .padding(.vertical , 10)
+    }
+}
+
+
 struct TransactionList : View {
     var body: some View {
         VStack {
-            Label(textLabel: "Transaction List",fontSize: 22)
-                .frame(width: 400, alignment: .leading)
+            TransactionListLabel()
             TransactionListTabItems()
+            
             TxnListRowItem()
             TxnListRowItem()
             TxnListRowItem()
@@ -88,7 +103,6 @@ struct TransactionList_Previews : PreviewProvider {
     static var previews: some View {
         VStack {
             TransactionList()
-            Spacer()
         }
         
         
@@ -97,10 +111,3 @@ struct TransactionList_Previews : PreviewProvider {
 #endif
 
 
-//extension Image {
-//    func setImageColor(color: Color) {
-//        let templateImage = self.image?.withRenderingMode(.alwaysTemplate)
-//        self.image = templateImage
-//        self.accentColor = color
-//    }
-//}
