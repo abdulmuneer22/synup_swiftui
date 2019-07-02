@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DFE512BC22CAFE65001BD572 /* MyBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE512BB22CAFE65001BD572 /* MyBalance.swift */; };
+		DFE512BE22CB0B08001BD572 /* IncomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE512BD22CB0B08001BD572 /* IncomeCard.swift */; };
+		DFE512C022CB0C4D001BD572 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE512BF22CB0C4D001BD572 /* Colors.swift */; };
+		DFE512C222CB1B93001BD572 /* TransactionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE512C122CB1B93001BD572 /* TransactionList.swift */; };
+		DFE512C422CB1BAA001BD572 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE512C322CB1BAA001BD572 /* Label.swift */; };
 		DFE8BEF522CAE42C00A6F569 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8BEF422CAE42C00A6F569 /* AppDelegate.swift */; };
 		DFE8BEF722CAE42C00A6F569 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8BEF622CAE42C00A6F569 /* SceneDelegate.swift */; };
 		DFE8BEF922CAE42C00A6F569 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8BEF822CAE42C00A6F569 /* ContentView.swift */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DFE512BB22CAFE65001BD572 /* MyBalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBalance.swift; sourceTree = "<group>"; };
+		DFE512BD22CB0B08001BD572 /* IncomeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeCard.swift; sourceTree = "<group>"; };
+		DFE512BF22CB0C4D001BD572 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		DFE512C122CB1B93001BD572 /* TransactionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionList.swift; sourceTree = "<group>"; };
+		DFE512C322CB1BAA001BD572 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		DFE8BEF122CAE42C00A6F569 /* dashboard-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dashboard-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE8BEF422CAE42C00A6F569 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFE8BEF622CAE42C00A6F569 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +73,11 @@
 				DFE8BEFF22CAE42E00A6F569 /* LaunchScreen.storyboard */,
 				DFE8BF0222CAE42E00A6F569 /* Info.plist */,
 				DFE8BEFC22CAE42E00A6F569 /* Preview Content */,
+				DFE512BB22CAFE65001BD572 /* MyBalance.swift */,
+				DFE512BD22CB0B08001BD572 /* IncomeCard.swift */,
+				DFE512BF22CB0C4D001BD572 /* Colors.swift */,
+				DFE512C122CB1B93001BD572 /* TransactionList.swift */,
+				DFE512C322CB1BAA001BD572 /* Label.swift */,
 			);
 			path = "dashboard-app";
 			sourceTree = "<group>";
@@ -147,7 +162,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFE8BEF522CAE42C00A6F569 /* AppDelegate.swift in Sources */,
+				DFE512C022CB0C4D001BD572 /* Colors.swift in Sources */,
 				DFE8BEF722CAE42C00A6F569 /* SceneDelegate.swift in Sources */,
+				DFE512C222CB1B93001BD572 /* TransactionList.swift in Sources */,
+				DFE512BC22CAFE65001BD572 /* MyBalance.swift in Sources */,
+				DFE512BE22CB0B08001BD572 /* IncomeCard.swift in Sources */,
+				DFE512C422CB1BAA001BD572 /* Label.swift in Sources */,
 				DFE8BEF922CAE42C00A6F569 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
